@@ -1,0 +1,24 @@
+ALGORITHM sentence
+VAR
+ch : STRING;
+nbchar,nbvowel: INTEGER :=0 ;
+nbword : INTEGER :=1 ;
+CONST
+vowel : STRING :='AEIOUYaeiouy';
+BEGIN
+   FOR i FROM 0 TO ch.length-2 DO
+        IF (ch[i]=' ') THEN
+            nbword= nbword+1;
+        ELSE
+         nbchar=nbchar+1;
+        FOR j FROM 0 TO vowel.length-1 DO
+           IF (ch[i]=vowel[J]) THEN
+               nbvowel=nbvowel+1;
+           END_IF
+        END_FOR
+        END_IF
+    END_FOR
+    write(nbchar,' Characters');
+    write(nbword,' Words');
+    write(nbvowel,' Vowels');
+END
